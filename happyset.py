@@ -2,16 +2,16 @@ import json
 import cplex
 
 def ler_grafo(u):
-    arquive= open(u, 'r')
-    conteudo= arquive.read()
+    arquive = open(u, 'r')
+    content = arquive.read()
     rawData = []
     def listar(x):
         for i in range(len(x)):
-            if x[i]==' ' or x[i]=='\n':
+            if x[i] == ' ' or x[i] == '\n':
                 rawData.append(x[:i])
                 listar(x[i+1:])
                 break
-    listar(conteudo)
+    listar(content)
 
     vertices, arestas = [int(v) for v in rawData[:2]]
     edgeData = [json.loads(edge) for edge in rawData[2:]]
