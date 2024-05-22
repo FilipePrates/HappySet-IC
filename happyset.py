@@ -1,8 +1,5 @@
-#Leitor de Grafo
-
 import json
 import cplex
-
 
 def ler_grafo(u):
     arquive= open(u, 'r')
