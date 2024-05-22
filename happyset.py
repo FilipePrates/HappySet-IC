@@ -18,7 +18,7 @@ def ler_grafo(u):
 
     vertices, arestas = [int(v) for v in rawData[:2]]
     edgeData = [json.loads(edge) for edge in rawData[2:]]
-    # print(str(vertices) + ' vertices, ' + str(arestas) + ' arestas, ', edgeData)
+    print(str(vertices) + ' vertices, ' + str(arestas) + ' arestas, ')
 
     m1, m2 = [], []
     for i in range(vertices):
@@ -27,8 +27,8 @@ def ler_grafo(u):
 
     def setupM1(y):
         if len(y) != 0:
-            m1[y[0]-1][y[1]-1] = 1
-            m1[y[1]-1][y[0]-1] = 1
+            m1[y[0]][y[1]] = 1
+            m1[y[1]][y[0]] = 1
             setupM1(y[2:])
     setupM1(edgeData)
     
@@ -106,19 +106,21 @@ def resolve_modelo(m1,m2,vertices,arestas,k):
         print('está feliz' if (values[h[j]] >= 1 - tol) else 'não está feliz') 
         
 def getFileName(nome):
-    if nome[-4:] == '.txt':
+    if nome == '':
+        return 'grafo.txt'
+    elif nome[-4:] == '.txt':
         return nome
     else:
         return nome + '.txt'
 
 def getK():
-    k = input('k:')
-    if k != '':
-        return int(k)
-    return 5
+    k = input('k (Enter 4 default):')
+    if k == '':
+        return 3
+    return int(k)
 
 def main():
-    filename = getFileName(input('Nome do arquivo contendo o grafo (.txt):'))
+    filename = getFileName(input('Nome do arquivo .txt contendo o grafo (Enter 4 default):'))
     k = getK()
     m1,m2,vertices,arestas= ler_grafo(filename)
     resolve_modelo(m1,m2,vertices,arestas,k)
