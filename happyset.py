@@ -128,3 +128,51 @@ def main():
 if __name__ == "__main__":
     main()
 
+#   Default:
+# Nome do arquivo .txt contendo o grafo (Enter 4 default):
+# k (Enter 4 default):
+# 4 vertices, 3 arestas, 
+# Default row names c1, c2 ... being created.
+# Version identifier: 22.1.1.0 | 2022-11-28 | 9160aff4d
+# CPXPARAM_Read_DataCheck                          1
+# CPXPARAM_Threads                                 1
+# Tried aggregator 1 time.
+# MIP Presolve eliminated 8 rows and 1 columns.
+# MIP Presolve modified 8 coefficients.
+# Reduced MIP has 7 rows, 7 columns, and 22 nonzeros.
+# Reduced MIP has 7 binaries, 0 generals, 0 SOSs, and 0 indicators.
+# Presolve time = 0.00 sec. (0.03 ticks)
+# Found incumbent of value 2.000000 after 0.00 sec. (0.04 ticks)
+# Probing time = 0.00 sec. (0.01 ticks)
+# Tried aggregator 1 time.
+# Detecting symmetries...
+# MIP Presolve eliminated 3 rows and 0 columns.
+# Reduced MIP has 4 rows, 7 columns, and 13 nonzeros.
+# Reduced MIP has 7 binaries, 0 generals, 0 SOSs, and 0 indicators.
+# Presolve time = 0.00 sec. (0.01 ticks)
+# Probing time = 0.00 sec. (0.00 ticks)
+# Clique table members: 7.
+# MIP emphasis: balance optimality and feasibility.
+# MIP search method: dynamic search.
+# Parallel mode: none, using 1 thread.
+# Root relaxation solution time = 0.00 sec. (0.00 ticks)
+
+#         Nodes                                         Cuts/
+#    Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+# *     0+    0                            2.0000        3.0000            50.00%
+#       0     0        cutoff              2.0000                      1     --- 
+
+# Root node processing (before b&c):
+#   Real time             =    0.00 sec. (0.08 ticks)
+# Sequential b&c:
+#   Real time             =    0.00 sec. (0.00 ticks)
+#                           ------------
+# Total (root+branch&cut) =    0.00 sec. (0.08 ticks)
+# Solution status:                   101
+# Nodes processed:                   0
+# Active user cuts/lazy constraints: 0
+# Optimal value:                     2.000000
+# Vertice 0 foi escolhido e 0 não está feliz
+# Vertice 1 foi escolhido e 1 está feliz
+# Vertice 2 foi escolhido e 2 está feliz
