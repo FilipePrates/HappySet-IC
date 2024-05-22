@@ -84,7 +84,6 @@ def resolve_modelo(m1,m2,vertices,arestas,k):
                   for i in range(vertices)],
         senses=['G'] * vertices,
         rhs=[-len(m2[i]) for i in range(vertices)])
-    
 
     
     cpx.parameters.threads.set(1)
