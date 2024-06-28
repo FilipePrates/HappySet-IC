@@ -1,17 +1,21 @@
 import json
 import cplex
 
+def listar(x):
+    rawData = []
+    start = 0
+    for i in range(len(x)):
+        if x[i] == ' ' or x[i] == '\n':
+            rawData.append(x[start:i])
+            start = i + 1
+    return rawData
+
+
 def ler_grafo(u):
     arquive = open(u, 'r')
     content = arquive.read()
     rawData = []
-    def listar(x):
-        for i in range(len(x)):
-            if x[i] == ' ' or x[i] == '\n':
-                rawData.append(x[:i])
-                listar(x[i+1:])
-                break
-    listar(content)
+    rawData = listar(content)
 
     vertices, arestas = [int(v) for v in rawData[:2]]
     edgeData = [json.loads(edge) for edge in rawData[2:]]
@@ -21,14 +25,12 @@ def ler_grafo(u):
     for i in range(vertices):
         m1.append([0]*vertices)
         m2.append([])
-
-    def setupM1(y):
-        if len(y) != 0:
-            m1[y[0]][y[1]] = 1
-            m1[y[1]][y[0]] = 1
-            setupM1(y[2:])
-    setupM1(edgeData)
     
+    for i in range(0,len(edgeData)-1):
+        m1[edgeData[i]][edgeData[i+1]] = 1
+        m1[edgeData[i+1]][edgeData[i]] = 1
+        i += 1
+
     if len(m1) != 0:
         for i in  range(len(m1)):
             for j in range(len(m1[i])):
@@ -102,25 +104,19 @@ def resolve_modelo(m1,m2,vertices,arestas,k):
         print('Vertice', str(j), 'foi escolhido e', str(j), end= ' ')
         print('está feliz' if (values[h[j]] >= 1 - tol) else 'não está feliz') 
         
-def getFileName(nome):
-    if nome == '':
-        return 'grafo.txt'
-    elif nome[-4:] == '.txt':
-        return nome
-    else:
-        return nome + '.txt'
-
-def getK():
+def main():
+    graphClass = input('Classe do grafo? (Enter 4 default):')
+    if graphClass == '':
+        graphClass = 'star'
+    graphSize = input('Tamanho do grafo? (n = 2^x):')
+    if graphSize == '':
+        graphSize = '1024'
     k = input('k (Enter 4 default):')
     if k == '':
-        return 3
-    return int(k)
-
-def main():
-    filename = getFileName(input('Nome do arquivo .txt contendo o grafo (Enter 4 default):'))
-    k = getK()
+        k = 3
+    filename = f'graphs/{graphClass}/{graphClass}_{graphSize}.txt'
     m1,m2,vertices,arestas= ler_grafo(filename)
-    resolve_modelo(m1,m2,vertices,arestas,k)
+    resolve_modelo(m1,m2,vertices,arestas,int(k))
 
 if __name__ == "__main__":
     main()
