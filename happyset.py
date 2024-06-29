@@ -86,12 +86,17 @@ def resolve_modelo(m1,m2,vertices,arestas,k):
 
     
     cpx.parameters.threads.set(1)
+    # limite de tempo de clock ~1h processamento CPU
     cpx.objective.set_sense(cpx.objective.sense.maximize)
     
     cpx.write('model.lp')
+    # begin time meu
     cpx.solve()
-
+    # end time meu
+    print(cpx.solution)
+    # limtie inf, sup. inf == sup => otimo
     print('Solution status:                   %d' % cpx.solution.get_status())
+    # se não otimo => best bound, best solution
     print('Nodes processed:                   %d' %
           cpx.solution.progress.get_num_nodes_processed())
     print('Active user cuts/lazy constraints: %d' %
@@ -103,7 +108,7 @@ def resolve_modelo(m1,m2,vertices,arestas,k):
     for j in [x for x in list(range(vertices)) if values[y[x]] >= 1 - tol]:
         print('Vertice', str(j), 'foi escolhido e', str(j), end= ' ')
         print('está feliz' if (values[h[j]] >= 1 - tol) else 'não está feliz') 
-        
+    # relaxação linear
 def main():
     graphClass = input('Classe do grafo? (Enter 4 default):')
     if graphClass == '':
