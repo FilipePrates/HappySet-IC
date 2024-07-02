@@ -108,6 +108,7 @@ def resolve_modelo(m1,m2,vertices,arestas,k):
     for j in [x for x in list(range(vertices)) if values[y[x]] >= 1 - tol]:
         print('Vertice', str(j), 'foi escolhido e', str(j), end= ' ')
         print('está feliz' if (values[h[j]] >= 1 - tol) else 'não está feliz') 
+    print("aaaa " + cpx.solution.multiobj.get_info())
     # relaxação linear
 def main():
     graphClass = input('Classe do grafo? (Enter 4 default):')
