@@ -58,16 +58,24 @@ def generateRandomBipartiteGraphs():
 
 def generateCubicGraphs():
     for n in range(1, 16):
-        f = open(f"{directory}/graphs/cubic/cubic_{2**n}.txt", "w")
-        num_vertices = 2**n
-        num_edges = num_vertices * 3 // 2  # Cubic graph has 3*d/2 edges where d is the number of vertices (approximately)
-        f.write(f"{num_vertices} {num_edges}\n")
-        for i in range(num_vertices):
-            neighbors = [(i - 1) % num_vertices, (i + 1) % num_vertices, (i + num_vertices // 2) % num_vertices]  # Connect each vertex to 3 neighbors
-            for neighbor in neighbors:
-                f.write(f"{i} {neighbor}\n")
-        f.write("end")
-        f.close()
+        file_path = f"{directory}/graphs/cubic2/cubic_{2**n}.txt"
+        with open(file_path, "w") as f:
+            num_vertices = 2**n
+            num_edges = num_vertices * 3 // 2  # Cubic graph has 3*d/2 edges where d is the number of vertices (approximately)
+            f.write(f"{num_vertices} {num_edges}\n")
+            
+            for i in range(num_vertices):
+                neighbors = [
+                    (i, (i - 1) % num_vertices),
+                    (i, (i + 1) % num_vertices),
+                    (i, (i + num_vertices // 2) % num_vertices)
+                ]
+                
+                for u, v in neighbors:
+                    if u < v:  # Ensure each edge is written only once
+                        f.write(f"{u} {v}\n")
+            
+            f.write("end\n")
 
 def generateBAGraphs():
     for n in range(2, 16):
