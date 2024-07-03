@@ -3,14 +3,14 @@
 ![alt text](output/starResults6p7_2.png "Title")
 ![alt text](output/BAResults6p7_2.png "Title")
 ![alt text](output/bipartiteResults6p7_2.png "Title")
-![alt text](output/cubicResults6p7_2 "Title")
-![alt text](output/lollipopResults6p7_2 "Title")
+![alt text](output/cubicResults6p7_2.png "Title")
+![alt text](output/lollipopResults6p7_2.png "Title")
 
 ![alt text](output/starResults6p7_3.png "Title")
 ![alt text](output/BAResults6p7_3.png "Title")
 ![alt text](output/bipartiteResults6p7_3.png "Title")
-![alt text](output/cubicResults6p7_3 "Title")
-![alt text](output/lollipopResults6p7_3 "Title")
+![alt text](output/cubicResults6p7_3.png "Title")
+![alt text](output/lollipopResults6p7_3.png "Title")
 
 # Maximum Happy Set problem (MaxHS)
 For an undirected graph G = (V, E) and a subset S ⊆ V of vertices, a vertex
