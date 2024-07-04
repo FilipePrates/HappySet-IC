@@ -1,9 +1,9 @@
 # MaxHappySet solver results: time vs N & Class & K
 
 
-[Barabási-Albert Interactive Results](output/Results9p10/Results9p10.html)
+[Barabási-Albert Interactive Results (HTML)](output/Results9p10/Results9p10.html)
 
-[All graph classes Interactive Results](output/Results6p7/fullResults6p7_2.html)
+[All graph classes Interactive Results (HTML)](output/Results6p7/fullResults6p7_2.html)
 
 ![alt text](output/Results6p7/starResults6p7_2.png "Title")
 ![alt text](output/Results6p7/BAResults6p7_2.png "Title")
