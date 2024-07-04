@@ -1,20 +1,23 @@
 # MaxHappySet solver results: time vs N & Class & K
 
 
-![alt text](output/starResults6p7_2.png "Title")
-![alt text](output/BAResults6p7_2.png "Title")
-![alt text](output/bipartiteResults6p7_2.png "Title")
-![alt text](output/cubicResults6p7_2.png "Title")
-![alt text](output/lollipopResults6p7_2.png "Title")
+![alt text](output/Results9p10/Results9p10.html "Title")
 
 
-![alt text](output/starResults6p7_3.png "Title")
-![alt text](output/BAResults6p7_3.png "Title")
-![alt text](output/bipartiteResults6p7_3.png "Title")
-![alt text](output/cubicResults6p7_3.png "Title")
-![alt text](output/lollipopResults6p7_3.png "Title")
+![alt text](output/Results6p7/starResults6p7_2.png "Title")
+![alt text](output/Results6p7/BAResults6p7_2.png "Title")
+![alt text](output/Results6p7/bipartiteResults6p7_2.png "Title")
+![alt text](output/Results6p7/cubicResults6p7_2.png "Title")
+![alt text](output/Results6p7/lollipopResults6p7_2.png "Title")
 
-![alt text](output/BAResults9_middle_4(tongue).png "Title")
+
+![alt text](output/Results6p7/starResults6p7_3.png "Title")
+![alt text](output/Results6p7/BAResults6p7_3.png "Title")
+![alt text](output/Results6p7/bipartiteResults6p7_3.png "Title")
+![alt text](output/Results6p7/cubicResults6p7_3.png "Title")
+![alt text](output/Results6p7/lollipopResults6p7_3.png "Title")
+
+![alt text](output/Results9/BAResults9_middle_4(tongue).png "Title")
 
 # Maximum Happy Set problem (MaxHS)
 For an undirected graph G = (V, E) and a subset S ⊆ V of vertices, a vertex
