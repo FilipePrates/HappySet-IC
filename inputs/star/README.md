@@ -1,0 +1,1 @@
+The star generated files should be here
