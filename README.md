@@ -1,5 +1,5 @@
 # MaxHappySet solver results: time vs N & Class & K
-[All graph classes Interactive Results (HTML)](output/Results6p7/fullResults6p7_2.html)
+[All graph classes Interactive Results (HTML)](output/Results11/fullResults6to11.html)
 
 ## Maximum Happy Set problem (MaxHS):
 
