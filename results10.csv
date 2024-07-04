@@ -1,0 +1,10 @@
+,id,graph_class,n,k,status,best_solution,best_bound,linear_relaxation,extra_params,result_ticks,result_time
+0,inputs/More_BA/BA_213.txt_0,BA,213,0,101,0.0,0.0,,,0.0,0.01572394371032715
+1,inputs/More_BA/BA_213.txt_10,BA,213,10,101,6.0,6.0,,,6.0,1.0664598941802979
+2,inputs/More_BA/BA_213.txt_20,BA,213,20,101,13.0,13.0,,,13.0,1.2843036651611328
+3,inputs/More_BA/BA_213.txt_30,BA,213,30,101,20.0,20.0,,,20.0,2.386032819747925
+4,inputs/More_BA/BA_213.txt_40,BA,213,40,101,27.0,27.0,,,27.0,19.8179714679718
+5,inputs/More_BA/BA_213.txt_50,BA,213,50,101,36.0,36.0,,,36.0,20.893796682357788
+6,inputs/More_BA/BA_213.txt_60,BA,213,60,101,44.0,44.0,,,44.0,29.091211557388306
+7,inputs/More_BA/BA_213.txt_70,BA,213,70,101,53.0,53.0,,,53.0,131.68434023857117
+8,inputs/More_BA/BA_213.txt_80,BA,213,80,101,61.0,61.0,,,61.0,82.7697365283966
