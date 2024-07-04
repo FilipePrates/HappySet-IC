@@ -7,12 +7,7 @@ For an undirected graph G = (V, E) and a subset S ⊆ V of vertices, a vertex v 
 
 ![alt text](output/Results11/Results11.png "Title")
 
-![alt text](output/Results6p7/starResults6p7_2.png "Title")
-![alt text](output/Results6p7/BAResults6p7_2.png "Title")
-![alt text](output/Results6p7/bipartiteResults6p7_2.png "Title")
-![alt text](output/Results6p7/cubicResults6p7_2.png "Title")
-![alt text](output/Results6p7/lollipopResults6p7_2.png "Title")
-
+![alt text](output/Results9/BAResults9_middle_3(tongue).png "Title")
 
 ![alt text](output/Results6p7/starResults6p7_3.png "Title")
 ![alt text](output/Results6p7/BAResults6p7_3.png "Title")
@@ -20,7 +15,6 @@ For an undirected graph G = (V, E) and a subset S ⊆ V of vertices, a vertex v 
 ![alt text](output/Results6p7/cubicResults6p7_3.png "Title")
 ![alt text](output/Results6p7/lollipopResults6p7_3.png "Title")
 
-![alt text](output/Results9/BAResults9_middle_4(tongue).png "Title")
 
 # Maximum Happy Set problem (MaxHS)
 For an undirected graph G = (V, E) and a subset S ⊆ V of vertices, a vertex
