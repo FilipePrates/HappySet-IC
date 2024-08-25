@@ -127,6 +127,8 @@ def main():
 if __name__ == "__main__":
     main()
 
+
+# Expected example output:
 #   Default:
 # Nome do arquivo .txt contendo o grafo (Enter 4 default):
 # k (Enter 4 default):
